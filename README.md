@@ -1,6 +1,6 @@
 # Fugazcord
 
-Our project is a chat application built with React on the front-end and Node.js on the back-end. It allows users to create channels, send messages, and see online users. We use Socket.IO for real-time communication and MongoDB for data storage.
+Our project is a chat application built with React on the front-end and Node.js on the back-end. It allows users to create channels, send messages, and see online users. We use Socket.IO for real-time communication and Postgresql for data storage.
 
 
 We have a suite of Jest test cases for the front-end and back-end code. We test various functionalities such as creating channels, sending messages, and user authentication. We also have integration tests that test the communication between the front-end and back-end.
@@ -49,7 +49,7 @@ We used Git and GitHub to manage version control. Each team member worked on a s
 
 ## Documentation
 
-I found that using Storybook was a great way to develop and test individual components in isolation. It allowed me to visualize each component's states and variations quickly without having to render them in the context of the full application. This made it much easier to develop and debug components without having to worry about other parts of the app. Additionally, it made it easier to share and communicate components with other members of my team. Overall, I found Storybook to be a valuable tool in my React development workflow.
+I found that using Styleguide was a great way to develop and test individual components in isolation. It allowed me to visualize each component's states and variations quickly without having to render them in the context of the full application. This made it much easier to develop and debug components without having to worry about other parts of the app. Additionally, it made it easier to share and communicate components with other members of my team. Overall, I found Storybook to be a valuable tool in my React development workflow.
 
 ## Acknowledgments
 
