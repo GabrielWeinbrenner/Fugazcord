@@ -20,33 +20,13 @@ List any software or tools that must be installed in order to run the project. F
 ### Installing
 
 1. Clone the repository:
+2. Install dependencies
 
-<pre class=""><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span></div></div></pre>
-
-<pre class=""><div class="bg-black rounded-md mb-4"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-bash">git clone https://github.com/username/repo-name.git
-</code></div></div></pre>
-
-2. Install dependencies:
-
-<pre class=""><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span></div></div></pre>
-
-<pre class=""><div class="bg-black rounded-md mb-4"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-bash">cd repo-name
-yarn install
-</code></div></div></pre>
-
-3. Set up the database:
-
-<pre class=""><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>css</span></div></div></pre>
-
-<pre class=""><div class="bg-black rounded-md mb-4"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-css">mysql -u username -p < schema.sql
-</code></div></div></pre>
-
+   <pre class=""><div class="bg-black rounded-md mb-4"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-sql">npm install</code></div></div></pre>
+3. Set up the Database:
 4. Start the development server:
 
-<pre class=""><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>sql</span></div></div></pre>
-
-<pre class=""><div class="bg-black rounded-md mb-4"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-sql">yarn start
-</code></div></div></pre>
+<pre class=""><div class="bg-black rounded-md mb-4"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-sql">npm run dev</code></div></div></pre>
 
 ### Running Tests
 
