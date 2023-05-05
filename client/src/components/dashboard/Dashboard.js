@@ -75,7 +75,7 @@ const ResponsiveSidebar = () => {
   const isSidebarOpen = useSelector((state) => state.sidebar.isOpen);
 
   return (
-    <nav id="sidebar">
+    <nav id="sidebar" data-testid="sidebar">
       <MobileDrawer
         anchor="left"
         variant="temporary"
@@ -127,7 +127,7 @@ const Dashboard = () => {
   }, [activeChannelId, dispatch]);
 
   return (
-    <Container $isMemberListOpen={isMemberListOpen}>
+    <Container data-testid="member-list" $isMemberListOpen={isMemberListOpen}>
       <ResponsiveSidebar />
       <Header />
       <ChatArea />

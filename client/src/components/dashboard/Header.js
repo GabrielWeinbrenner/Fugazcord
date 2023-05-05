@@ -43,7 +43,7 @@ const Header = () => {
     !channels.loading && channels.byId[channels.active]?.name;
 
   return (
-    <Wrapper id="header" className="disable-select">
+    <Wrapper data-testid="header" id="header" className="disable-select">
       <List horizontal gap="10px">
         <List horizontal gap="6px" style={{ alignItems: 'center' }}>
           <Title>{!channels.loading && activeChannelName}</Title>

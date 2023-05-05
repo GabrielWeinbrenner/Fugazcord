@@ -16,7 +16,7 @@ const Container = styled.div`
 
 const ChatArea = () => {
   return (
-    <Container id="chat-area">
+    <Container data-testid="chat-area" id="chat-area">
       <Messages />
       <WriteArea />
     </Container>

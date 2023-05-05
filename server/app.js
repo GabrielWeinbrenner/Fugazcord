@@ -5,13 +5,6 @@ const db = require("./db");
 const usersRouter = require("./routes/users");
 const channelsRouter = require("./routes/channels");
 
-db.client
-  .connect()
-  .then(() => console.log("Connected to PostgreSQL"))
-  .catch((err) =>
-    console.log("Error connecting to PostgreSQL:", err.message)
-  );
-
 const app = express();
 
 // middlewares
@@ -36,14 +29,5 @@ app.get("/api", async (request, response) => {
     response.status(500).send("ERROR")
   }
 });
-
-if (process.env.NODE_ENV === "production") {
-  const path = require("path");
-  const buildPath = path.resolve(__dirname, "..", "client", "build");
-  app.use(express.static(buildPath));
-  app.get("*", (request, response) => {
-    response.sendFile(path.join(buildPath, "index.html"));
-  });
-}
 
 module.exports = app;

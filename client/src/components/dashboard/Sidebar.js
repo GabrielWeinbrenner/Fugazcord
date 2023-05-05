@@ -14,8 +14,8 @@ const Container = styled.div`
 const Sidebar = () => {
   return (
     <Container>
-      <ServerList />
-      <ChannelList />
+      <ServerList data-testid="server-list"/>
+      <ChannelList data-testid="channel-list"/>
     </Container>
   );
 };

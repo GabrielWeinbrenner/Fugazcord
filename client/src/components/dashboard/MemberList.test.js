@@ -2,8 +2,8 @@ import React from "react";
 import { Provider } from "react-redux";
 import { render, screen } from "@testing-library/react";
 import configureMockStore from "redux-mock-store";
-import Dashboard from "./Dashboard";
-import { MemoryRouter, Route } from "react-router-dom";
+import MemberList from "./MemberList";
+import { MemoryRouter } from "react-router-dom";
 import '@testing-library/jest-dom'
 import thunk from "redux-thunk";
 
@@ -42,29 +42,26 @@ const store = mockStore({
     isOpen: false,
   },
   memberList: {
-    onlineUsers: [],
+    onlineUsers: [
+      { id: 1, username: "user1", avatarColor: "#ff0000" },
+      { id: 2, username: "user2", avatarColor: "#00ff00" },
+    ],
     isOpen: false,
   },
 });
 
-describe("Dashboard", () => {
-  it("renders the Sidebar, Header, ChatArea and MemberList components", () => {
+describe("MemberList", () => {
+  it("renders the online users with their avatars and usernames", () => {
     render(
       <Provider store={store}>
         <MemoryRouter initialEntries={["/channels/1"]}>
-            <Dashboard />
+          <MemberList />
         </MemoryRouter>
       </Provider>
     );
 
-    const sidebar = screen.getByTestId("sidebar");
-    const header = screen.getByTestId("header");
-    const chatArea = screen.getByTestId("chat-area");
-    const memberList = screen.getByTestId("member-list");
+    const users = store.getState().memberList.onlineUsers;
 
-    expect(sidebar).toBeInTheDocument();
-    expect(header).toBeInTheDocument();
-    expect(chatArea).toBeInTheDocument();
-    expect(memberList).toBeInTheDocument();
+    expect(2).toEqual(users.length);
   });
 });

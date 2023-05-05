@@ -96,7 +96,7 @@ const Container = styled.div`
 
 const ServerList = () => {
   return (
-    <Container>
+    <Container data-testid="server-list">
       <ListItem>
         <ArrowTooltip title="Sample Server" placement="left">
           <ServerIcon isActive isDiscord>

@@ -8,6 +8,12 @@ const client = new Client({
   ssl: isProduction ? { rejectUnauthorized: false } : false,
 });
 
+client.connect().then(() => {
+  console.log("Connected to PostgreSQL");
+}).catch((err) => {
+  console.log("Error connecting to PostgreSQL:", err.message);
+});
+
 const query = async (text, params) => {
   return await client.query(text, params);
 };

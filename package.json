@@ -10,7 +10,8 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "format": "npx prettier --write .",
     "lint": "eslint .",
-    "heroku-postbuild": "cd client && npm install --production --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd client && npm install --production --no-shrinkwrap && npm run build",
+    "test": "jest --watchAll --verbose"
   },
   "author": "Gabriel Weinbrenner",
   "dependencies": {
@@ -25,7 +26,9 @@
   "devDependencies": {
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.3.0",
+    "jest": "^29.5.0",
     "nodemon": "^2.0.15",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "supertest": "^6.3.3"
   }
 }

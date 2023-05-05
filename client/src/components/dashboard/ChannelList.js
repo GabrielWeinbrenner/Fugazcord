@@ -75,7 +75,7 @@ const ChannelList = () => {
   const isInDesktop = useWindowWidth() > 768;
 
   return (
-    <Container className="disable-select">
+    <Container data-testid="channel-list" className="disable-select">
       <Header>
         <Heading>Sample Server</Heading>
       </Header>
